@@ -1,0 +1,20 @@
+<%- include("partials/header") -%> 
+
+<h1>Home</h1>
+<p> <%= Content %> </p>
+
+
+
+<%    Eposts.forEach((post)=>{%>
+
+    <% let path = "/posts/" + post.title  %>  
+     <h1 class="homeTitle"><%=post.title%></h1>
+     <p>
+         <%= post.content.substring(0,100) + " ..." %> 
+         <a href="<%= path %>">Read more</a> 
+     </p>
+ <%   })%>
+ 
+
+
+<%- include("partials/footer") -%>
